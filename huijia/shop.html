@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" style = "font-size:20px">
+<head>
+	<meta charset="UTF-8">
+	<meta name = "viewport" content="width=device-width, initial-scale=1.0">
+	<title>购物车详情</title>
+	<link rel = "stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel = "stylesheet" href="css/xiangqing.css">
+	<script src = "http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script src = "http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src = "js/shop.js" type="text/javascript"></script>
+</head>
+<body>
+	<div class = "price">
+		<div class = "headline">
+			<div class = "warapper-header" style = "height:50px;background:#ddd;position: relative;">
+				<a href="huijiajiaoyu.html" style = "position: absolute;height:2.5rem;" class = "clear">
+				<img src="images/左箭头.png" alt="" style = "width:1.3rem;height:1.2rem;margin-top:0.8rem;">
+				</a>
+				<p class = "lead cz" >购物车
+				</p>
+			</div>
+		</div>
+		<hr>
+		<div class = "pricecontent" style = "background-color:#f1efef;">
+			<div class = "pricecontener">
+				<a id = "item" href="#" class = "clear" style = "margin:0rem 1rem 0rem 0;border-top:none;background-color:white;">
+					<input type="checkbox" name = "danxuan" value = "6488" style = "margin-right:0.3rem;margin-top:0.5rem;display:none;" >
+					<input onclick = "single()" type="button"  value = "删除" style = "margin-right:0.5rem;margin-top:0.5rem;color:red;padding:0.1rem;font-size:0.5rem;" >
+					<img src="images/电脑室/2.jpg" alt="" >
+					<div class = "xiangqing1"><span>￥</span>6488.<span>00</span></div>
+					<div class = "xiangqing"><span>电脑室设备</span></div>
+					<div class = "shuliang">
+						<button id = "add" style = "width:1rem;border-radius:40px;">+</button>
+						<input id = "txt" type = "text" value = "1" style = "width:1rem;text-align:center;">
+						<button id = "sub" style = "width:1rem;border-radius:40px;">-</button>
+					</div>
+				</a>
+			</div>
+			<div class = "pricecontener">
+				<a id = "item1" href="#" class = "clear" style = "margin:0rem 1rem 0rem 0;border-top:none;background-color:white;">
+					<input type="checkbox" name = "danxuan" value = "6488" style = "margin-right:0.3rem;margin-top:0.5rem;display:none;" >
+					<input onclick = "single1()" type="button"  value = "删除" style = "margin-right:0.5rem;margin-top:0.5rem;color:red;padding:0.1rem;font-size:0.5rem;" >
+					<img src="images/电脑室/2.jpg" alt="" >
+					<div class = "xiangqing1"><span>￥</span>6488.<span>00</span></div>
+					<div class = "xiangqing"><span>电脑室设备</span></div>
+					<div class = "shuliang">
+						<button id = "add1" style = "width:1rem;border-radius:40px;">+</button>
+						<input id = "txt1" type = "text" value = "1" style = "width:1rem;text-align:center;">
+						<button id = "sub1" style = "width:1rem;border-radius:40px;">-</button>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class = "gouwuche">
+			<div class = "col-xs-12">
+				<div class = "gouwuchecontent clear" style = "position:relative;background:white;">
+					<img src="images/购物车1.png" alt="" >
+					<div class = "zongji">
+						<span style = "font-weight:700;">总计:</span>
+						<span style = "color:red">￥</span>
+						<span id = "zongjine" style = "color:red"></span>
+						<span style = "color:red">.00</span>
+					</div>
+					<div class = "btn-group" role = "group" style = "float:right;">
+						<button  type = "button" class = "btn btn-danger" style = "margin-top:0.2rem">去结算</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

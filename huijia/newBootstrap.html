@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang = "en" style = "font-size:20px">
+<head>
+	<meta charset = "UTF-8">
+	<meta name = "viewport" content="width=device-width, initial-scale=1.0">
+	<title>行业新闻</title>
+	<link rel = "stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src = "http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script src = "http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+		p{
+			margin:0;
+			padding:0;
+		}
+		.container{
+			height:100%;
+		}
+		.item{
+			text-decoration: none;
+			display: block;
+			margin: 0.5rem;
+			box-sizing: border-box;
+			color:#222;
+			position: relative;
+			padding:0.5rem 0.5rem 0.5rem 7rem;
+			border: 1px solid #ddd;
+			height: 6rem;
+		}
+		.item .img{
+			display: block;
+			position: absolute;
+			width: 6rem;
+			left: 0.5rem;
+			top:0.5rem;
+			background: #ddd;
+			bottom: 0.5rem;
+		}
+		.item .title{
+			font-size: 1rem;
+			overflow: hidden;
+			display: -webkit-box;
+   			-webkit-box-orient: vertical;
+			-webkit-line-clamp:2;
+			text-overflow: ellipsis;
+			height: 3rem;
+		}
+		.item img{
+			width: 100%;
+			height: 100%;
+		}
+		.item .time{
+			color: #ddd;
+			font-size: 0.8rem;
+			overflow: hidden;
+			margin-top:0.2rem;
+		}
+		.cz{
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+			text-align: center;
+			letter-spacing:3px;
+			font-family: 微软雅黑;
+			font-weight: 700;
+		}
+
+	</style>
+</head>
+<body>
+	<div class = "warapper-header" style = "height:50px;background:#6b6161;color:#f3f0f0;">
+	</div>
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+		    <div class="container" >
+		        <!--小屏幕导航按钮和logo-->
+			        <div class="navbar-header">
+			          	<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		            </button>
+		            <a href="#" class="navbar-brand" style = "font-weight:700;">行业新闻</a>
+			        </div>
+		            
+		     
+		        <!--小屏幕导航按钮和logo-->
+		        <!--导航-->
+		           <div class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+		           	  <ul class="nav navbar-nav navbar-right">
+		           	  	 <li><a href="huijiajiaoyu(bootstrap).html" class="">主页</a></li>
+		           	  	 <li><a href="#jieshao" class="current">公司介绍</a></li>
+		                 <li><a href="productBootstrap.html" class="">产品中心</a></li>
+		                 <li><a href="demoBootstrap.html" class="">成功案例</a></li>
+		                 <li><a href="newBootstrap.html" class="">行业新闻</a></li>
+		           	  </ul>
+		           </div>
+		          </div>
+			</nav>
+	<div class = "container1">
+	</div>
+	<script type = "text/javascript">
+		var container = document.querySelector('.container1');
+		var item = document.querySelector('.container .item');
+		var img_box = document.querySelector('.container .img');
+		var img =  document.querySelector('.container img');
+		var title = document.querySelector('.container .title');
+		var time = document.querySelector('.container .time');
+
+		var xhr = new XMLHttpRequest();
+		xhr.open('get','http://36kr.com/api//search/entity-search?page=1&per_page=40&keyword=%E5%AD%A6%E5%89%8D%E6%95%99%E8%82%B2&entity_type=post&_=1522333788029',false);
+		xhr.send();
+		var text = JSON.parse(xhr.responseText);
+		var news = text.data.items;
+
+		for (var i = 0; i < news.length; i++) {
+			//新建元素
+			var item = document.createElement('a');
+				item.className = 'item';
+				item.href = 'http://36kr.com/p/'+news[i].id+'.html'
+			var img_box = document.createElement('div');
+				img_box.className = 'img';
+			//创建img标签
+			var img = document.createElement('img');
+				img.src = news[i].cover;
+				img_box.appendChild(img);
+			//创建p标签
+			var title = document.createElement('p');
+				title.className = 'title';
+				title.innerHTML = news[i].title;
+
+			var time = document.createElement('p');
+				time.className = 'time';
+				time.innerHTML = news[i].published_at;
+			//a标签内插入元素
+				item.appendChild(img_box);
+				item.appendChild(title);
+				item.appendChild(time);
+			//容器内插入a标签
+				container.appendChild(item);
+		}
+
+		/*小屏幕导航点击关闭菜单*/
+        $('.navbar-collapse a').click(function(){
+            $('.navbar-collapse').collapse('hide');
+        });
+	
+	</script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+*{
+			margin:0;padding:0;
+			font-family: 华文细黑;
+		}
+		html,body{
+			height:100%;
+		}
+		body{
+			background:#f1efef;
+		}
+		.carousel .item img {
+	        height: 220px;
+	        width: 100%;
+	      }
+		.cz{
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+			text-align: center;
+			letter-spacing:3px;
+			font-family: 微软雅黑;
+			font-weight: 700;
+		}
+		.header img{
+			width:1.5rem;
+			height:2rem;
+			background: white;
+		}
+		.header{
+			margin-top:1.5rem;
+			margin-bottom:1.5rem;
+		}
+		.container{
+			background: white;
+		}
+		hr{
+			color:#cdcdcd;
+			margin:0;
+			height: 0.4rem;
+		}
+		.shouye{
+			height:2.5rem;
+			background: white;
+			position:relative;
+		}
+		.box1{
+			height:1.8rem;
+			width:0.9rem;
+			background:#cdcdcd;
+			display:inline-block;
+		}
+		.shouyebox{
+			margin-left:0.5rem;
+			padding-top:0.3rem;
+		}
+		.zt{
+			display: inline-block;
+			position:absolute;
+			margin-left:0.5rem;
+			margin-top: 0.2rem;
+		}
+		.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+			border:none;	
+		}
+		.nav-tabs li{
+			padding-bottom:0.1rem;
+			text-align: center;
+		}
+		.nav-tabs li a{
+			color:black;
+			position:relative;
+			padding:0;
+			padding-top:0.1rem;
+		}
+		.nav-tabs li span{
+			font-size: 0.1rem;
+			font-family: 微软雅黑;
+		}
+		.tab-content{
+			overflow-y:auto;
+			flex:1;
+			display:flex;
+		}
+		.tab-pane{
+			width:100%;
+			overflow-y: auto;
+		}
+		.denglu{
+			width:100%;
+			height:6rem;
+			background:#efb03d;
+		}
+		#wode{
+			width:100%;
+		}
+		.wrapper{
+			height:100%;
+			display:flex;
+			flex-direction:column;
+		}
+		.yonghu{
+			width:100%;
+			height:2rem;
+			background-color: white;
+		}
+		/*中小学案例*/
+		.zhongxiaoxue {
+			margin-left:1rem;
+			margin-right:1rem;
+			position:relative;
+
+		}
+		.zhongxiaoxue img{
+			width:12.8rem;
+			height:6rem;
+		}
+		.zhongxiaoxue a{
+			display: inline-block;
+			margin-left:1.9rem;
+		}
+		.zhongxiaoxue p{
+			margin:0;
+			padding:0;
+			display: inline-block;
+			font-size:0.5rem;
+			color:black;
+		}
+		.imgcontent img{
+			width:0.7rem;
+			height:0.7rem;
+		}
+		.imgcontent{
+			bottom:0.01rem;
+			position:absolute;
+			width:12.8rem;
+			height:1.2rem;
+			background: black;
+			opacity: 0.5;
+			z-index:0;
+		}
+		.imgcontent p{
+			color:white;
+		}
